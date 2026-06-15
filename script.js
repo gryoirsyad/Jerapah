@@ -27,3 +27,22 @@ else{
 }
 
 document.getElementById("greeting").innerHTML = greeting;
+
+const checkboxes =
+document.querySelectorAll("input[type='checkbox']");
+
+checkboxes.forEach((box,index)=>{
+
+    box.checked =
+    localStorage.getItem(index)==="true";
+
+    box.addEventListener("change",()=>{
+
+        localStorage.setItem(
+            index,
+            box.checked
+        );
+
+    });
+
+});

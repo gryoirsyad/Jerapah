@@ -2,19 +2,23 @@ function updateClock(){
 
     const now = new Date();
 
-    document.getElementById("time")
+    document
+    .getElementById("clock")
     .innerHTML =
-    now.toLocaleTimeString("id-ID");
+    now.toLocaleTimeString(
+        "id-ID"
+    );
 
-    document.getElementById("date")
+    document
+    .getElementById("date")
     .innerHTML =
     now.toLocaleDateString(
         "id-ID",
         {
             weekday:"long",
-            year:"numeric",
+            day:"numeric",
             month:"long",
-            day:"numeric"
+            year:"numeric"
         }
     );
 }
@@ -25,18 +29,28 @@ updateClock();
 
 
 
-const hour = new Date().getHours();
+const hour =
+new Date().getHours();
 
 let greeting="";
 
 if(hour < 12){
-    greeting = "Good Morning, Sena";
+
+    greeting =
+    "Good Morning, Sena";
+
 }
 else if(hour < 18){
-    greeting = "Good Afternoon, Sena";
+
+    greeting =
+    "Good Afternoon, Sena";
+
 }
 else{
-    greeting = "Good Evening, Sena";
+
+    greeting =
+    "Good Evening, Sena";
+
 }
 
 document
@@ -45,17 +59,17 @@ document
 
 
 
-const quotes = [
+const quotes=[
 
 "Be yourself. YOLO.",
 
 "Life does not ask us to compete.",
 
+"I will become whatever I want.",
+
 "Still alive.",
 
 "Humans should not become wolves to other humans.",
-
-"I will become whatever I want.",
 
 "A complicated person trying to become something."
 
@@ -64,10 +78,59 @@ const quotes = [
 const random =
 quotes[
 Math.floor(
-Math.random() * quotes.length
+Math.random()
+*
+quotes.length
 )
 ];
 
 document
 .getElementById("quote")
-.innerHTML = random;
+.innerHTML =
+random;
+
+
+
+const audio =
+document
+.getElementById(
+"rainAudio"
+);
+
+const button =
+document
+.getElementById(
+"musicButton"
+);
+
+audio.volume = 0.3;
+
+audio.play()
+.catch(()=>{
+
+    button.innerHTML =
+    "▶ Start Journey";
+
+});
+
+button.onclick=()=>{
+
+    if(audio.paused){
+
+        audio.play();
+
+        button.innerHTML =
+        "🌧 Rain";
+
+    }
+
+    else{
+
+        audio.pause();
+
+        button.innerHTML =
+        "🔇 Muted";
+
+    }
+
+};

@@ -1,0 +1,50 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#121212;
+    color:white;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 40px;
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(10px);
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:20px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+}
+
+.hero{
+    height:90vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.hero h2{
+    font-size:3rem;
+}
+
+.clock h1{
+    font-size:5rem;
+    margin-top:20px;
+    color:#FFD166;
+}

@@ -1,77 +1,136 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
     <title>Becoming</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+          href="style.css">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+          rel="stylesheet">
+
 </head>
+
 <body>
 
-    <div class="background"></div>
+    <div class="aurora"></div>
 
     <nav>
+
         <h1>becoming</h1>
 
         <ul>
+
             <li><a href="#">Home</a></li>
-            <li><a href="pages/about.html">About</a></li>
-            <li><a href="pages/journal.html">Journal</a></li>
-            <li><a href="pages/philosophy.html">Philosophy</a></li>
+
+            <li>
+                <a href="pages/about.html">
+                    About
+                </a>
+            </li>
+
+            <li>
+                <a href="pages/journal.html">
+                    Journal
+                </a>
+            </li>
+
+            <li>
+                <a href="pages/habits.html">
+                    Habits
+                </a>
+            </li>
+
+            <li>
+                <a href="pages/philosophy.html">
+                    Philosophy
+                </a>
+            </li>
+
         </ul>
+
     </nav>
 
     <main class="container">
 
-        <div class="card">
+        <section class="hero card">
 
             <h2 id="greeting"></h2>
 
-            <h1 id="time"></h1>
+            <h1 id="clock"></h1>
 
             <p id="date"></p>
 
-        </div>
+            <br>
 
-        <div class="card">
+            <p class="subtitle">
 
-            <h2>Current Thought</h2>
+                A complicated person
+                trying to become something.
+
+            </p>
+
+        </section>
+
+        <section class="card">
+
+            <h2>Today's Thought</h2>
 
             <p id="quote"></p>
 
-        </div>
+        </section>
 
-        <div class="card">
+        <section class="card">
 
-            <h2>About Me</h2>
+            <h2>Life Principle</h2>
 
             <p>
-                A complicated person.
-                Repetitive.
-                Reflective.
-                Supportive.
+
+                Life does not ask us to
+                compete with others.
+
             </p>
 
             <br>
 
             <p>
-                Life does not ask us to compete.
+
+                Be yourself.
+                YOLO.
+
             </p>
 
-            <p>
-                Be yourself. YOLO.
-            </p>
-
-        </div>
+        </section>
 
     </main>
+
+    <button id="musicButton">
+
+        🌧 Rain
+
+    </button>
+
+    <audio
+        id="rainAudio"
+        loop>
+
+        <source
+        src="assets/audio/rain.mp3"
+        type="audio/mpeg">
+
+    </audio>
 
     <script src="script.js"></script>
 

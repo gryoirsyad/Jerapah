@@ -27,7 +27,44 @@ setInterval(updateClock,1000);
 
 updateClock();
 
+function countdown(){
 
+    const examDate =
+    new Date("2026-07-01");
+
+    const kknDate =
+    new Date("2026-08-01");
+
+    const now =
+    new Date();
+
+    const examDays =
+    Math.ceil(
+        (examDate - now)
+        /
+        (1000*60*60*24)
+    );
+
+    const kknDays =
+    Math.ceil(
+        (kknDate - now)
+        /
+        (1000*60*60*24)
+    );
+
+    document
+    .getElementById("exam")
+    .innerHTML =
+    `📚 Ujian: ${examDays} hari`;
+
+    document
+    .getElementById("kkn")
+    .innerHTML =
+    `🏕 KKN: ${kknDays} hari`;
+
+}
+
+countdown();
 
 const hour =
 new Date().getHours();

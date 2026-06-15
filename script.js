@@ -66,6 +66,32 @@ function countdown(){
 
 countdown();
 
+const quotes = [
+
+"Be yourself. YOLO.",
+
+"Still alive.",
+
+"Life does not ask us to compete.",
+
+"I will become whatever I want.",
+
+"Humans should not become wolves to other humans."
+
+];
+
+document
+.getElementById("quote")
+.innerHTML =
+
+quotes[
+Math.floor(
+Math.random()
+*
+quotes.length
+)
+];
+
 const hour =
 new Date().getHours();
 

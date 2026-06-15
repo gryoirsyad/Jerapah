@@ -2,19 +2,32 @@ function updateClock(){
 
     const now = new Date();
 
-    const time = now.toLocaleTimeString();
+    document.getElementById("time")
+    .innerHTML =
+    now.toLocaleTimeString("id-ID");
 
-    document.getElementById("time").innerHTML = time;
-
+    document.getElementById("date")
+    .innerHTML =
+    now.toLocaleDateString(
+        "id-ID",
+        {
+            weekday:"long",
+            year:"numeric",
+            month:"long",
+            day:"numeric"
+        }
+    );
 }
 
 setInterval(updateClock,1000);
 
 updateClock();
 
+
+
 const hour = new Date().getHours();
 
-let greeting = "";
+let greeting="";
 
 if(hour < 12){
     greeting = "Good Morning, Sena";
@@ -26,23 +39,35 @@ else{
     greeting = "Good Evening, Sena";
 }
 
-document.getElementById("greeting").innerHTML = greeting;
+document
+.getElementById("greeting")
+.innerHTML = greeting;
 
-const checkboxes =
-document.querySelectorAll("input[type='checkbox']");
 
-checkboxes.forEach((box,index)=>{
 
-    box.checked =
-    localStorage.getItem(index)==="true";
+const quotes = [
 
-    box.addEventListener("change",()=>{
+"Be yourself. YOLO.",
 
-        localStorage.setItem(
-            index,
-            box.checked
-        );
+"Life does not ask us to compete.",
 
-    });
+"Still alive.",
 
-});
+"Humans should not become wolves to other humans.",
+
+"I will become whatever I want.",
+
+"A complicated person trying to become something."
+
+];
+
+const random =
+quotes[
+Math.floor(
+Math.random() * quotes.length
+)
+];
+
+document
+.getElementById("quote")
+.innerHTML = random;

@@ -57,7 +57,31 @@ document
 .getElementById("greeting")
 .innerHTML = greeting;
 
+async function getWeather(){
 
+    const API_KEY =
+    "MASUKKAN_API_KEY";
+
+    const city =
+    "Bandung";
+
+    const url =
+    `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`;
+
+    const response =
+    await fetch(url);
+
+    const data =
+    await response.json();
+
+    document
+    .getElementById("weather")
+    .innerHTML =
+    `${data.main.temp}°C • ${data.weather[0].main}`;
+
+}
+
+getWeather();
 
 const quotes=[
 

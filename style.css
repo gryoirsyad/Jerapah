@@ -113,6 +113,42 @@ body{
     right:-100px;
 }
 
+.dashboard{
+    text-align:center;
+}
+
+#clock{
+    font-size:4rem;
+    color:#FFD166;
+    margin:15px 0;
+}
+
+.card{
+
+    background:
+    rgba(255,255,255,0.08);
+
+    backdrop-filter:
+    blur(20px);
+
+    border-radius:25px;
+
+    padding:30px;
+
+    transition:0.3s;
+}
+
+.card:hover{
+
+    transform:
+    translateY(-10px);
+
+    box-shadow:
+    0 10px 40px
+    rgba(122,229,130,0.2);
+
+}
+
 nav{
 
     display:flex;

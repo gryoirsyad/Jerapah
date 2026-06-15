@@ -22,6 +22,28 @@ body{
     overflow-x:hidden;
 }
 
+.card{
+
+    animation:
+    fadeIn 1s ease;
+}
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:
+        translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:
+        translateY(0);
+    }
+
+}
+
 .aurora{
 
     position:fixed;

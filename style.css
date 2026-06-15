@@ -213,13 +213,16 @@ nav a:hover{
 @media(max-width:768px){
 
     nav{
+    position:sticky;
+    top:0;
 
-        flex-direction:column;
+    background:
+    rgba(255,255,255,0.05);
 
-        gap:20px;
+    backdrop-filter:blur(20px);
 
-        padding:20px;
-    }
+    z-index:100;
+}
 
     nav ul{
 

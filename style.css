@@ -44,6 +44,17 @@ body{
     z-index:-1;
 }
 
+.card:hover{
+
+    transform:
+    translateY(-10px)
+    scale(1.02);
+
+    box-shadow:
+    0 15px 40px
+    rgba(122,229,130,0.2);
+}
+
 .mountains{
     position:fixed;
     bottom:0;

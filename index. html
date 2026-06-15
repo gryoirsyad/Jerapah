@@ -42,3 +42,21 @@
 
 </body>
 </html>
+
+<section class="about-card">
+
+    <h2>About Me</h2>
+
+    <p>
+        A complicated person.
+        Repetitive.
+        Reflective.
+        Supportive.
+    </p>
+
+    <p>
+        Be Yourself.
+        YOLO.
+    </p>
+
+</section>

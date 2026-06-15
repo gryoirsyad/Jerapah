@@ -48,3 +48,12 @@ nav a{
     margin-top:20px;
     color:#FFD166;
 }
+
+.about-card{
+    width:80%;
+    margin:auto;
+    padding:40px;
+    background:rgba(255,255,255,0.05);
+    border-radius:20px;
+    margin-bottom:50px;
+}
